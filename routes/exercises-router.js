@@ -6,4 +6,6 @@ router.get('/', (req,res) => {
     res.render('exercises/exercises-list')
 })
 
+
+
 module.exports = router;
