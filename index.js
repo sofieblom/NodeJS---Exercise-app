@@ -5,6 +5,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const exerciseRouter = require('./routes/exercises-router.js')
 const ExercisesModel = require('./models/ExercisesModel.js')
+const WorkoutsModel = require('./models/WorkoutsModel.js')
 
 const app = express();
 const port = 8000;
