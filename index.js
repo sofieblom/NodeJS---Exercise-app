@@ -1,6 +1,10 @@
+require('dotenv').config();
+require('./mongoose.js');
+
 const express = require('express');
 const exphbs = require('express-handlebars');
 const exerciseRouter = require('./routes/exercises-router.js')
+const ExercisesModel = require('./models/ExercisesModel.js')
 
 const app = express();
 const port = 8000;
