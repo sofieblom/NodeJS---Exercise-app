@@ -1,9 +1,15 @@
 <h2>Choose an exercise</h2>
 
+{{#each exercises}}
+    <p><b>{{title}}</b> </p>
+{{/each}}
 
+<h4>
+    If you cant find the exercise you're looking for, add it!
+</h4>
 <form action="/exercises/create" method="post">
-    <input type="text" name="title" placeholder="Title">
-    <select name="difficulty">
+    <input type="text" name=" " placeholder="Title">
+    <select name="hardness">
         <option value="" disabled selected>Degree of difficulty</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -13,8 +19,7 @@
     </select>
     <br>
     <br>
-    <textarea name="description" cols="33" rows="5">Description</textarea>
+    <textarea name="description" cols="33" rows="5" placeholder="Description"></textarea>
     <br>
     <input type="submit" value="Add new exercise">
-
     </form>
