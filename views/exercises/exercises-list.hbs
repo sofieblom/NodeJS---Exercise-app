@@ -1,14 +1,31 @@
 <h2>Choose an exercise</h2>
 
-{{#each exercises}}
-    <p><b>{{title}}</b> </p>
-{{/each}}
+<div class="exercise-container">
+    {{#each exercises}}
+    <div class="exercise-button-wrapper">
+        <div class="exercise-box">
+            <a href="/exercises/{{_id}}/edit"><p class="exercise-title"><b>{{title}}</b></p> </a>
+            <p>Difficulty: {{hardness}}</p> 
+            <p>{{description}}</p>  
+      </div>
+         <div class="buttonbox">
+            <form action="exercises/{{_id}}/delete" method="post">
+                <input type="submit" value="Delete" class="delete-btn">
+            </form>
+             <form action="exercises/{{_id}}/select" method="post">
+                <input type="submit" value="Choose" class="choose-btn">
+            </form>
+        </div>
+    </div>    
+    {{/each}}
+  </div>
+
 
 <h4>
     If you cant find the exercise you're looking for, add it!
 </h4>
 <form action="/exercises/create" method="post">
-    <input type="text" name=" " placeholder="Title">
+    <input type="text" name="title" maxlength="18" placeholder="Title">
     <select name="hardness">
         <option value="" disabled selected>Degree of difficulty</option>
         <option value="1">1</option>
@@ -19,7 +36,7 @@
     </select>
     <br>
     <br>
-    <textarea name="description" cols="33" rows="5" placeholder="Description"></textarea>
+    <textarea name="description" cols="33" rows="5" placeholder="Description" maxlength="60" ></textarea>
     <br>
     <input type="submit" value="Add new exercise">
     </form>

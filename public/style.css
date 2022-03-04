@@ -1,5 +1,7 @@
 html{
-    background-color: #3D405B;
+    /* background-color: #3D405B; */
+    /* background-color: #81B29A; */
+    background-color: #F2CC8F;
 }
 
 body{
@@ -13,10 +15,17 @@ body{
     gap: 20px;
     justify-content: center;
 }
+.exercise-button-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .exercise-box{
     box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.24);
     padding: 25px;
+    width: 150px;
+    height: 180px;
     text-align: center;
     background-color: #f4f1dec9;
 }
