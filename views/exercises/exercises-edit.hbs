@@ -1,0 +1,18 @@
+<h2>{{title}}</h2>
+
+
+<form action="/exercises/{{_id}}/edit" method="post"></form>
+<input type="text" name="title" value="{{title}}">
+
+<select name="hardness">
+        <option value="" disabled selected>{{hardness}}</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select>
+    <br><br>
+      <textarea name="description" cols="33" rows="5" placeholder="Description">{{description}}</textarea>
+    <br><br>
+    <input type="submit" value="Save changes">
